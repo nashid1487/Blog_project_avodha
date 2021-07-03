@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="main-wrapper">
+  <section class="blog-list px-3 py-5 p-md-5">
+    <div class="container">
+      <div class="item mb-5">
+        <div class="media">
+          <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{{post.image.url}}" alt="image">
+            <div class="media-body">
+              <h1 class="title mb-1">{{ object.title }}</h1>
+              <p class="meta mb-1">{{ post.author }} | {{ post.created_on }}</p>
+              <p class="intro">{{ object.content | safe }}</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% endblock content %}
